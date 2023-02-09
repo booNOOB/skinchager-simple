@@ -13,8 +13,8 @@ private:
 	void* processHandle = nullptr;
 
 public:
-	// Constructor that finds the process id
-	// and opens a handle
+	// Construtor que encontra o ID do processo
+	// e abre um identificador
 	Memory(const std::string_view processName) noexcept
 	{
 		::PROCESSENTRY32 entry = { };
@@ -32,19 +32,19 @@ public:
 			}
 		}
 
-		// Free handle
+		// Alça livre
 		if (snapShot)
 			::CloseHandle(snapShot);
 	}
 
-	// Destructor that frees the opened handle
+	// Destruidor liberando alça aberta
 	~Memory()
 	{
 		if (processHandle)
 			::CloseHandle(processHandle);
 	}
 
-	// Returns the base address of a module by name
+	// Retorna o endereço base de um módulo por nome
 	const std::uintptr_t GetModuleAddress(const std::string_view moduleName) const noexcept
 	{
 		::MODULEENTRY32 entry = { };
@@ -69,7 +69,7 @@ public:
 		return result;
 	}
 
-	// Read process memory
+	// Ler a memória do processo
 	template <typename T>
 	constexpr const T Read(const std::uintptr_t& address) const noexcept
 	{
@@ -78,7 +78,7 @@ public:
 		return value;
 	}
 
-	// Write process memory
+	// Escrever memória de processo
 	template <typename T>
 	constexpr void Write(const std::uintptr_t& address, const T& value) const noexcept
 	{
