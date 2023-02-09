@@ -8,6 +8,7 @@
 👨‍💻 Configuração
 - Clonar o repositório
 - Altere os (offsets) Skinchanger para (offsets, mais atual)
+- Alterar os (itemDefinition) para ter skins novas
 - Compilar na versão Release | x86
 - Executar quando o CS:GO estiver aberto
 - Apreciar
