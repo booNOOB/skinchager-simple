@@ -8,7 +8,9 @@
 👨‍💻 Configuração
 - Clonar o repositório
 - Altere os (offsets) Skinchanger para (offsets, mais atual)
-- Alterar os (itemDefinition) para ter skins novas
+- Alterar os (itemDefinition) para ter skins novas 
+- Link dos skin ID: https://totalcsgo.com/skin-ids
+- Link dos (itemDefinition): https://pastebin.com/3zNVRK4W
 - Compilar na versão Release | x86
 - Executar quando o CS:GO estiver aberto
 - Apreciar
